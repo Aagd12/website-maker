@@ -148,7 +148,7 @@
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about.html">About</a>
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -164,7 +164,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact.html">Contact us</a>
+                        <a class="nav-link" href="/contact">Contact us</a>
                     </li>
                 </ul>
             </div>
@@ -183,15 +183,15 @@
         <form action="/contact" method="post">
             <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">@</span>
-                <input type="email" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="email" class="form-control" name="email" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             <br>
             <div class="row g-3 align-items-center">
                 <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label">Password</label>
+                    <label for="inputPassword6" name="pasword" class="col-form-label">Password</label>
                 </div>
                 <div class="col-auto">
-                    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    <input type="password" id="inputPassword6" name="pasword" class="form-control" aria-describedby="passwordHelpInline">
                 </div>
                 <div class="col-auto">
                     <span id="passwordHelpInline" class="form-text">
@@ -202,7 +202,7 @@
             <br>
             <div class="row g-3 align-items-center">
                 <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label"> Conform Password</label>
+                    <label for="inputPassword6" name="pasword" class="col-form-label"> Conform Password</label>
                 </div>
                 <div class="col-auto">
                     <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
@@ -227,24 +227,28 @@
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
                 <label class="form-check-label" for="flexRadioDefault2">
                     Are you a Developer
                 </label>
             </div>
             <select class="form-select form-select-sm my-4" aria-label=".form-select-sm SignUp">
                 <option selected>Open this select menu</option>
-                <option value="1">Web Trends</option>
-                <option value="2">Technology</option>
-                <option value="3">Blog</option>
+                <optionname="1">Web Trends</option>
+                <optionname="2">Technology</option>
+                <optionname="3">Blog</option>
             </select>
             <div class="form-floating my-4">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea">Comments</label>
+                <textarea class="form-control" name="comment" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label name="comment" for="floatingTextarea">Comments</label>
             </div>
             <div class="form-floating my-4">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                <label for="floatingTextarea">More About You</label>
+                <textarea class="form-control" name=" morecomment" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label name="morecomment" for="floatingTextarea">More About You</label>
+            </div>
+            <div class="form-floating my-4">
+                <input name="file" type="file" name=" file" id="file">
+
             </div>
             <button type="submit" class="btn1">Submit</button>
         </form>
