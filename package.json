@@ -15,6 +15,7 @@
         "express": "^4.17.1",
         "mongoose": "^6.0.5",
         "node": "^16.6.1",
+        "nodemon": "^2.0.12",
         "pkill": "^2.0.0",
         "sudo": "^1.0.3",
         "xdg-basedir": "^5.1.0"

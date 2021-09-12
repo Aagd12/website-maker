@@ -3,7 +3,7 @@ const app = express();
 const fs = require("fs");
 const path = require("path");
 const port = process.env.PORT || 8050;
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 app.set('views', path.join(__dirname, 'views'))
 app.engine('html', require('ejs').renderFile);
 
@@ -11,12 +11,12 @@ app.engine('html', require('ejs').renderFile);
 const mongoose = require('mongoose');
 const bodyparser = require('body-parser');
 
-const db = 'mongodb+srv://saurabh:<saurabh@123t>@cluster0.7cw4e.mongodb.net/icoder?retryWrites=true&w=majority';
+const db = "mongodb+srv://saurabh:saurabh@123t%20cluster0.7cw4e.mongodb.net/dancewebsite?retryWrites=true&w=majority";
 mongoose.connect(db, { useNewUrlParser: true }, { useUnifiedTopology: true }, )
     .then(() => {
         console.log("connection succesful");
-    }).catch(() => {
-        // console.log("  no connection");
+    }).catch((e) => {
+
     })
 
 const kittySchema = new mongoose.Schema({
@@ -24,7 +24,7 @@ const kittySchema = new mongoose.Schema({
     email: String,
     password: String,
     comment: String,
-    More_Intro: String,
+    morecomment: String,
 
 });
 app.use(express.urlencoded());
@@ -34,6 +34,15 @@ app.get("/", (req, res) => {
 });
 app.get("/about", (req, res) => {
     res.render('about.html');
+});
+app.get("/post", (req, res) => {
+    res.render('post.html');
+});
+app.get("/blogs", (req, res) => {
+    res.render('blogs.html');
+});
+app.get("/learn", (req, res) => {
+    res.render('learn.html');
 });
 app.get("/contact", (req, res) => {
 
