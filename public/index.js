@@ -74,7 +74,7 @@ function showNotes() {
     if (notesObj.length != 0) {
         notesElm.innerHTML = html;
     } else {
-        notesElm.innerHTML = "For showiing notes you have to first add notes  ";
+        // notesElm.innerHTML = "For showiing notes you have to first add notes  ";
     }
 };
 let search = document.getElementById("searchText");
