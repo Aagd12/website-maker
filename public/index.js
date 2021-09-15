@@ -61,7 +61,7 @@ function showNotes() {
             console.log(s, m);
             html += `<div class="card me-2 mb-2 note"  style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">❤@${s} 
+      <h5 class="card-title">@${s} 
 
         </h5>
       <p class="card-text"> ${m}</p>
